@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% block body %}
-<h2>{{ display_melon.common_name }}</h2>
+<h2>{{ display_melon.common_name }}</h2> 
+
+<!-- Server is sending a variable to the template called  display_melon; we seen it in melons.py -->
+
+
 <img class="product-img" src="{{display_melon.imgurl}}">
 <div class="cart well">
     <h3>Price per melon</h3>

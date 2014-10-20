@@ -48,7 +48,7 @@ def add_to_cart(id):
 
 
 @app.route("/login", methods=["GET"])
-def show_login():
+def show_login():  
     return render_template("login.html")
 
 

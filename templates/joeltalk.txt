@@ -1,0 +1,26 @@
+application like gmail:
+
+  little bar at top: message sent...if you send a message.. this is a one time message time feedback...  other types of messages ie 'you bought this melon' 'you rented this movie'
+
+
+  from flask import Flask
+
+   @app.route('/color-submit') 
+   def submit-color()
+
+   flash ('color saved') 
+
+   gives feedback to the user after an action happened... IE if user pressed submit, you'll see a feedback... the flash fun. python - end of things
+
+   flask itself.. doesn't change html or do this...
+
+   on the base.html... the code i put notes on
+      with: how you assign variable... if it was js you would of use var name = ...
+
+      if messages... are there any messages? is it empty? if empty go to end of the if statement..or if there is a message, loop over each message in messages, each time after the message you push out that message via <li>
+
+      Why is this in the base templet:  it'll appear at the top and appear everywhere...built in for flash...
+
+      *****one time message use flash('color saved'); 1x feedback...
+
+      **** works for cookies... it won't continue to show the message.. that the magic of using the flash('color saved').. it won't show up again.

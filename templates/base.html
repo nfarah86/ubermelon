@@ -12,17 +12,30 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="/cart"><img class="melon-cart" src="watermelon.png"> My Melon Cart</a></li>
-                        <li><a href="">Log In</a></li>
+                        <li><a href="/login">Log In</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="container">
             {% with messages = get_flashed_messages() %}
+            
+            <!-- messages = list of flash messages (messages to show to the user) -->
+
+
             {% if messages %}
+
+         <!--    if that list IS NOT EMPTY -->
+
             {% for message in messages %}
+
+            <!-- loop over the list each time through, calling a message
+ -->
             <ul class="flashes">
                 <li>{{message}}</li>
+
+                <!-- message will be a string
+ -->
             </ul>
             {% endfor %}
             {% endif %}
@@ -31,3 +44,4 @@
         </div>
     </body>
 </html>
+<!-- why skeleton page? every page will have a message; you don't want to handwrite it for all the page -->
