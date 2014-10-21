@@ -35,16 +35,38 @@ def shopping_cart():
     accompanying screenshots for details."""
     return render_template("cart.html")
 
+
+
+
+
+
+
+
 @app.route("/add_to_cart/<int:id>")
-def add_to_cart(id):
+def add_to_cart(id):\
+    session.setdefault("cart",[]).append(id)
+
+    flash("Successfully added to cart")
+    return redirect("/cart")
+
+
+
+   
+    
+
+
     """TODO: Finish shopping cart functionality using session variables to hold
     cart list.
+
+
+
+
 
     Intended behavior: when a melon is added to a cart, redirect them to the
     shopping cart page, while displaying the message
     "Successfully added to cart" """
 
-    return "Oops! This needs to be implemented!"
+    
 
 
 @app.route("/login", methods=["GET"])
